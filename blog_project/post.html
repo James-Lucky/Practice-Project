@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Post - EarthHow</title>
+    <link rel="icon" type="image/svg+xml" href="fav.svg" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .post-container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+        .post-header {
+            margin-bottom: 30px;
+        }
+        .post-title {
+            font-size: 36px;
+            font-weight: 800;
+            margin-bottom: 10px;
+            color: var(--text-main);
+        }
+        .post-meta {
+            color: var(--text-muted);
+            font-size: 14px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .post-category-badge {
+            background-color: var(--primary-blue);
+            color: white;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 12px;
+        }
+        .post-image-container {
+            width: 100%;
+            height: 400px;
+            margin-bottom: 30px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .post-image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .post-content-body {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #444;
+        }
+        .post-content-body p {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="new-header">
+        <div class="container header-content">
+            <a href="index.html" class="logo new-logo"><span class="logo-icon">E</span> Earth<span>News</span></a>
+            <nav class="new-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="dashboard.html" class="login-btn" style="padding: 6px 16px;">Admin</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Post Content -->
+    <div class="container post-container" id="single-post-container">
+        <!-- Loaded dynamically by post.js -->
+        <div style="text-align: center; padding: 50px;">
+            <i class="fas fa-spinner fa-spin fa-3x" style="color: var(--primary-blue);"></i>
+            <p style="margin-top: 15px;">Loading post...</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="new-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="logo new-logo" style="margin-bottom: 20px;"><span class="logo-icon">E</span> Earth<span>News</span></div>
+                <div class="footer-links">
+                    <div class="footer-col">
+                        <h4>Categories</h4>
+                        <ul>
+                            <li><a href="#">Atmosphere</a></li>
+                            <li><a href="#">Career</a></li>
+                            <li><a href="#">Geology</a></li>
+                            <li><a href="#">Nature</a></li>
+                            <li><a href="#">Space</a></li>
+                            <li><a href="#">Water</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <a href="#">About</a> | 
+                <a href="contact.html">Contact</a> | 
+                &copy; 2026 EarthNews Replica
+            </div>
+        </div>
+    </footer>
+
+    <script src="post.js"></script>
+</body>
+</html>

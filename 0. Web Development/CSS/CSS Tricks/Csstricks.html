@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Tricks</title>
+</head>
+<body>
+
+    <style>
+        
+        /* Text Image */
+
+        .head {
+    background-image: url(https://wallpaperaccess.com/full/802611.jpg);
+    background-size: contain;
+    font-size: 50px;
+    font-weight: 900;
+    background-clip: text;
+    color: transparent;
+    -webkit-background-clip: text;
+    text-align: center;
+    margin-top: 0px !important;
+}
+
+/* Border image */
+
+        .img {
+            height: 250px;
+            width: 250px;
+            border-radius: 50%;
+            background: linear-gradient(rgb(179, 179, 33),rgb(200, 40, 40),rgb(38, 38, 172),rgb(41, 179, 41));
+            padding: 10px;
+        } 
+
+/* Selector */
+
+        h1 {
+            font-size: 50px;
+            text-transform: uppercase;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h5 {
+            font-size: 40px;
+        }
+
+        h1::selection {
+            color: blue;
+            background-color: azure;
+        }
+
+        h5::selection {
+            color: rgb(255, 255, 255);
+            background-color: rgb(0, 0, 0);
+        }
+
+/* Rocket Shadow */
+
+        .rocs {
+            filter: drop-shadow(10px 10px 20px rgb(87, 87, 87));
+        }
+
+/* Image hover */
+
+.img1 {
+    height: 50%;
+    width: 50%;
+    transition: all ease 1s;
+    overflow: hidden;
+}
+
+.img1:hover {
+
+    scale: 1.2;
+}
+
+.box {
+    object-fit: cover;
+    overflow: hidden;
+}
+
+/* Fillter properties */
+.img2 {
+/* filter: blur(10px);
+filter: brightness(3); */
+/* filter: contrast(4); */
+filter: grayscale(2);
+}
+
+/* Loader */
+
+.loader {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    border: 8px solid gainsboro;
+    border-top-color: #333;
+   animation: rotate 1s infinite;
+}
+
+@keyframes rotate {
+    100% {
+        rotate: 360deg;
+    }
+}
+
+/* Hover Underline */
+
+.under {
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    position: absolute;
+    text-transform: uppercase;
+
+}
+
+.under::after {
+content: "";
+position: absolute;
+left: 0;
+bottom: 0;
+height: 3px;
+width: 0%;
+background-color: #333;
+transition: all ease 1s;
+}
+
+.under:hover::after {
+
+    width: 100%;
+}
+
+/* Text border */
+
+.bord {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 120px;
+    font-weight: 900;
+    -webkit-text-stroke: 4px black;
+    color: transparent;
+}
+    </style>
+
+    <!-- Text in image -->
+
+        <h1 class="head">Java Script</h1>
+    
+<!-- Background border color  -->
+
+        <div class="rainbow">
+            <img class="img" src="Main.PNG" alt="img">
+        </div>
+
+<!-- Selector -->
+
+<span>
+    <h1>Hello World</h1>
+    <h5>I am in the black ocean</h5>
+</span>
+
+<!-- Rocket shadow -->
+
+<img class="rocs" src="rocket.png" alt="Img">
+
+
+<!-- Hover Image Style  -->
+
+
+<div class="box">
+<img class="img1" src="https://cdn.pixabay.com/photo/2023/04/11/16/04/solar-wind-7917659_1280.jpg" alt="Img">
+</div>
+
+<!-- filter properties -->
+
+<img class="img2" src="https://cdn.pixabay.com/photo/2023/04/11/16/04/solar-wind-7917659_1280.jpg" alt="Img">
+
+
+<!-- Loader -->
+
+<div class="loader"></div>
+
+<!-- Hover Underline -->
+
+<h1 class="under">In the dark ocean</h1>
+
+<!-- Text Style Border -->
+
+<h1 class="bord">in the dark world</h1>
+</body>
+</html>

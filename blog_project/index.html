@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>World News</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/svg+xml" href="fav.svg" />
+    <!-- Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="new-header">
+      <div class="container header-content">
+        <a href="index.html" class="logo new-logo">World<span>News</span></a>
+        <nav class="new-nav">
+          <ul>
+            <li><a href="#">Latest News</a></li>
+            <li><a href="#">Categories</a></li>
+            <li><a href="#">Subscribe</a></li>
+          </ul>
+        </nav>
+        <a href="dashboard.html" class="login-btn">Admin Login</a>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-new">
+      <div class="container hero-content-new">
+        <div class="hero-text-new">
+          <h1>Headlines that keep you informed</h1>
+          <p>
+            Stay up to date with the latest stories from around the globe. Get
+            personalized news delivered right to your inbox every morning.
+          </p>
+
+          <form
+            class="email-capture-form"
+            onsubmit="
+              event.preventDefault();
+              alert('Subscribed!');
+            "
+          >
+            <div class="input-wrapper">
+              <label>Your email address</label>
+              <input type="email" placeholder="samantha@email.com" required />
+            </div>
+            <button type="submit">Get Started</button>
+          </form>
+        </div>
+        <div class="hero-image-new">
+          <img src="news-hero.svg" alt="Reading news illustration" style="max-width: 500px; height: auto; object-fit: contain; filter: drop-shadow(0 10px 20px rgba(0,0,0,0.1));" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Admin Posts Grid -->
+    <section class="container" style="padding: 40px 20px 0px;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+            <h2 class="section-title" style="margin: 0; font-size: 24px; text-align: left;">My Blog Posts</h2>
+        </div>
+        <div class="latest-grid-new" id="admin-posts-bento">
+            <div class="featured-post-new" id="admin-featured-post-container">
+                <!-- Populated by app.js -->
+            </div>
+            <div class="side-posts-new" id="admin-side-posts-container">
+                <!-- Populated by app.js -->
+            </div>
+        </div>
+        <div class="pagination-numbers" id="admin-pagination" style="margin-top: 30px;">
+            <!-- Populated by app.js -->
+        </div>
+    </section>
+
+    <!-- Latest Post Section -->
+    <section class="container" style="padding: 60px 20px">
+      <div
+        style="
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 20px;
+        "
+      >
+        <h2
+          class="section-title"
+          style="margin: 0; font-size: 24px; text-align: left"
+        >
+          Latest post
+        </h2>
+      </div>
+      <div class="latest-grid-new">
+        <div class="featured-post-new" id="featured-post-container">
+          <!-- Populated by app.js -->
+        </div>
+        <div class="side-posts-new" id="side-posts-container">
+          <!-- Populated by app.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- News Highlights Grid -->
+    <section class="container" style="padding: 40px 20px 80px">
+      <div
+        style="
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 30px;
+        "
+      >
+        <h2
+          class="section-title"
+          style="margin: 0; font-size: 24px; text-align: left"
+        >
+          News Highlights
+        </h2>
+        <div class="pagination-arrows">
+          <button class="arrow-btn"><i class="fas fa-arrow-left"></i></button>
+          <button class="arrow-btn"><i class="fas fa-arrow-right"></i></button>
+        </div>
+      </div>
+
+      <div class="news-grid-3col" id="highlights-grid">
+        <!-- Populated by app.js -->
+      </div>
+
+      <div class="pagination-numbers" id="highlights-pagination">
+        <button class="arrow-btn" style="border: none">
+          <i class="fas fa-arrow-left"></i>
+        </button>
+        <span class="page-num active">1</span>
+        <span class="page-num">2</span>
+        <span class="page-num">3</span>
+        <span class="page-num">4</span>
+        <span class="page-num">5</span>
+        <button class="arrow-btn" style="border: none">
+          <i class="fas fa-arrow-right"></i>
+        </button>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="new-footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="logo new-logo" style="margin-bottom: 20px">
+            <span class="logo-icon">E</span> Earth<span>News</span>
+          </div>
+          <div class="footer-links">
+            <div class="footer-col">
+              <h4>Categories</h4>
+              <ul>
+                <li><a href="#">Atmosphere</a></li>
+                <li><a href="#">Career</a></li>
+                <li><a href="#">Geology</a></li>
+                <li><a href="#">Nature</a></li>
+                <li><a href="#">Space</a></li>
+                <li><a href="#">Water</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h4>Features</h4>
+              <ul>
+                <li><a href="#">Articles</a></li>
+                <li><a href="#">Infographics</a></li>
+                <li><a href="#">Newsletter</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <a href="#">About</a> | <a href="#">Articles</a> |
+          <a href="contact.html">Contact</a> | <a href="#">How To Cite</a> |
+          <a href="#">Privacy Policy</a> |
+          <a href="#">Terms of Service</a>
+          <br /><br />
+          &copy; 2026 EarthNews Replica
+        </div>
+      </div>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>

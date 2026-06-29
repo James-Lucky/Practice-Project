@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - EarthHow</title>
+    <link rel="icon" type="image/svg+xml" href="fav.svg" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .contact-section {
+            padding: 80px 0;
+            background-color: var(--bg-light);
+        }
+        .contact-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 50px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+        .contact-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .contact-header h1 {
+            font-size: 36px;
+            color: var(--text-main);
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
+        .contact-header p {
+            color: var(--text-muted);
+            font-size: 16px;
+        }
+        .contact-form .form-group {
+            margin-bottom: 25px;
+        }
+        .contact-form label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--text-main);
+        }
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            font-size: 16px;
+            transition: var(--transition);
+        }
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            outline: none;
+            border-color: var(--primary-blue);
+            box-shadow: 0 0 0 4px rgba(37, 117, 181, 0.1);
+        }
+        .submit-btn {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, #174b7c 100%);
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 15px rgba(37, 117, 181, 0.3);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="new-header">
+        <div class="container header-content">
+            <a href="index.html" class="logo new-logo"><span class="logo-icon">E</span> Earth<span>News</span></a>
+            <nav class="new-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="dashboard.html" class="login-btn" style="padding: 6px 16px;">Admin</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contact Form Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-container">
+                <div class="contact-header">
+                    <h1>Get in Touch</h1>
+                    <p>Have a question about Earth Science? Want to contribute? Send us a message!</p>
+                </div>
+                <form class="contact-form" onsubmit="event.preventDefault(); alert('Thank you! Your message has been sent successfully.'); this.reset();">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" required placeholder="Jane Doe">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" required placeholder="jane@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" required placeholder="How can we help you?">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" rows="6" required placeholder="Write your message here..."></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message <i class="fas fa-paper-plane" style="margin-left: 8px;"></i></button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="new-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="logo new-logo" style="margin-bottom: 20px;"><span class="logo-icon">E</span> Earth<span>News</span></div>
+                <div class="footer-links">
+                    <div class="footer-col">
+                        <h4>Categories</h4>
+                        <ul>
+                            <li><a href="#">Atmosphere</a></li>
+                            <li><a href="#">Career</a></li>
+                            <li><a href="#">Geology</a></li>
+                            <li><a href="#">Nature</a></li>
+                            <li><a href="#">Space</a></li>
+                            <li><a href="#">Water</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <a href="#">About</a> | 
+                <a href="#">Articles</a> | 
+                <a href="contact.html">Contact</a> | 
+                <a href="#">Privacy Policy</a>
+                <br><br>
+                &copy; 2026 EarthNews Replica
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
