@@ -1,0 +1,108 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-bg: #F4EFE6;
+  --color-brand-bgDark: #1D1107;
+  --color-brand-text: #22150C;
+  --color-brand-saffron: #D95204;
+  --color-brand-green: #115C2D;
+  --color-brand-creamLight: #FAF8F4;
+  --color-brand-cardBorder: #D9D2C5;
+  
+  --font-serif: var(--font-playfair), serif;
+  --font-sans: var(--font-jakarta), sans-serif;
+  
+  --animate-marquee: marquee 25s linear infinite;
+
+  @keyframes marquee {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-50%); }
+  }
+}
+
+:root {
+  --background: #F4EFE6;
+  --foreground: #22150C;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-jakarta), system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Smooth scrolling behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F4EFE6;
+}
+::-webkit-scrollbar-thumb {
+  background: #D9D2C5;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #D95204;
+}
+
+/* Custom selection styling */
+::selection {
+  background-color: #D95204;
+  color: #FAF8F4;
+}
+
+/* Crawling Cockroach animations */
+@keyframes scurryLeft {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(-18deg); }
+}
+
+@keyframes scurryRight {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(18deg); }
+}
+
+@keyframes scurryBody {
+  0%, 100% { transform: scale(1) translate(0, 0); }
+  25% { transform: scale(1.03) translate(0.3px, -0.3px); }
+  75% { transform: scale(0.97) translate(-0.3px, 0.3px); }
+}
+
+@keyframes wiggleAntennae {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(6deg); }
+}
+
+/* Scurrying active class bindings */
+.scurrying .left-legs-group {
+  animation: scurryLeft 0.07s infinite ease-in-out;
+  transform-origin: 20px 20px;
+}
+
+.scurrying .right-legs-group {
+  animation: scurryRight 0.07s infinite ease-in-out;
+  transform-origin: 20px 20px;
+}
+
+.scurrying .cockroach-body-group {
+  animation: scurryBody 0.07s infinite ease-in-out;
+  transform-origin: 20px 20px;
+}
+
+.scurrying .antenna-left {
+  animation: wiggleAntennae 0.12s infinite ease-in-out;
+  transform-origin: 18px 6px;
+}
+
+.scurrying .antenna-right {
+  animation: wiggleAntennae 0.12s infinite ease-in-out reverse;
+  transform-origin: 22px 6px;
+}
